@@ -1,6 +1,10 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
+    id ("androidx.navigation.safeargs.kotlin")
+
 }
 
 android {
@@ -38,6 +42,9 @@ android {
         viewBinding = true
 
     }
+//    kotlin {
+//        jvmToolchain(8)
+//    }
 }
 
 dependencies {
@@ -45,6 +52,10 @@ dependencies {
     //NavComponent
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+
+    //DaggerHilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -66,3 +77,7 @@ dependencies {
 //
 ////DataStore
 //implementation (libs.androidx.datastore.preferences)
+
+fun alias(s: String) {
+
+}
