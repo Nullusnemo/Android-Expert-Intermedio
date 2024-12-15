@@ -19,6 +19,7 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
     }
 
     buildTypes {
@@ -38,6 +39,7 @@ android {
             isDebuggable = true
             resValue("string", "arisname", "[DEBUG] HoroscoApp")
             buildConfigField("String", "BASE_URL", "\"https://newastro-debug.vercel.app/\"")
+
 
         }
 
